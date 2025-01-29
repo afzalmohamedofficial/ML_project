@@ -2,19 +2,11 @@ import streamlit as st
 import pandas as pd
 import joblib
 import json
-import sys
-import gdown
 
 
-# Replace 'FILE_ID' with the actual file ID
-url = "https://drive.google.com/file/d/15vWwo-Kw6Cwo-eZcYycK7DWdW6h5Dx10/view?usp=sharing"
-output = "model.pkl"  # File name to save locally
-gdown.download(url, output, quiet=False)
-
-
-with open(output, 'rb') as f:
-    model = joblib.load(f)
-
+model_path = "./vehicle_price_model.pkl"
+with open(model_path, 'rb') as file:
+    model = joblib.load(file)
 
 
 # streamlit interface
