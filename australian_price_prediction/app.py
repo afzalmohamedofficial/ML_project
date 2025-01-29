@@ -4,7 +4,7 @@ import joblib
 import json
 
 
-model_path = "./vehicle_price_model.pkl"
+model_path = "ML_project/australian_price_prediction/vehicle_price_model.pkl"
 with open(model_path, 'rb') as file:
     model = joblib.load(file)
 
