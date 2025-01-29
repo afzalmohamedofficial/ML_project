@@ -4,13 +4,11 @@ import pandas as pd
 import pickle
 import json
 
-
 model_name = 'afzalmohamedofficial/Australian_vehicle_price_prediction'
 model_file = hf_hub_download(repo_id=model_name, filename='final.pkl')
 
 with open(model_file, "rb") as file:
   model = pickle.load(file)
-
 
 # streamlit interface
 st.title("Australian Vehicle Price Prediction")
@@ -19,10 +17,6 @@ brandmapping_path = "/mount/src/ml_project/australian_price_prediction/brand_map
 
 with open(brandmapping_path, "r") as file:
   brands_dict = json.load(file)
-
-
-#st.sidebar.header("Input Features")
-
 
 kilometer = st.number_input("Kilometer driven", min_value=0)
 seats = st.selectbox("Select seats_count", [2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 11, 12.0, 14.0, 15.0, 22.0])
