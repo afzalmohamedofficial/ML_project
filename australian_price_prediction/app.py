@@ -4,7 +4,7 @@ import joblib
 import json
 
 
-model = joblib.load("./australian_price_prediction/vehicle_price_model.pkl")
+model = joblib.load("vehicle_price_model.pkl")
 
 
 
