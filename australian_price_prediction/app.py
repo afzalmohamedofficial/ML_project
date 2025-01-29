@@ -1,9 +1,14 @@
 import streamlit as st
+from huggingface_hub import hf_hub_download
 import pandas as pd
 import pickle
 import json
 
-with open("/mount/src/ml_project/australian_price_prediction/vehicle4.pkl", "rb") as file:
+
+model_name = 'afzalmohamedofficial/Australian_vehicle_price_prediction'
+model_file = hf_hub_download(repo_id=model_name, filename='final.pkl')
+
+with open(model_file, "rb") as file:
   model = pickle.load(file)
 
 
