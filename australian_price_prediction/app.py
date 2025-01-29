@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 import json
 
-model = joblib.load("/mount/src/ml_project/australian_price_prediction/vehicle_price_model.pkl", mmap_mode='r')
+with open("/mount/src/ml_project/australian_price_prediction/vehicle4.pkl", "rb") as file:
+  model = pickle.load(file)
 
 
 # streamlit interface
