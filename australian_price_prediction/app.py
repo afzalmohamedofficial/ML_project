@@ -21,7 +21,7 @@ with open(brandmapping_path, "r") as file:
   brands_dict = json.load(file)
 
 
-st.sidebar.header("Input Features")
+#st.sidebar.header("Input Features")
 
 
 kilometer = st.number_input("Kilometer driven", min_value=0)
