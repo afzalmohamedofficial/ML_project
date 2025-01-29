@@ -3,7 +3,8 @@ import pandas as pd
 import joblib
 import json
 
-model = joblib.load("/mount/src/ml_project/australian_price_prediction/vehicle_price_model.pkl")
+model = joblib.load("/mount/src/ml_project/australian_price_prediction/vehicle_price_model.pkl", mmap_mode='r')
+
 
 # streamlit interface
 st.title("Australian Vehicle Price Prediction")
